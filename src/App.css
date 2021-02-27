@@ -6,8 +6,21 @@
 
 body{
     font-family: 'montseratt', sans-serif;
+     /* overflow: hidden;  */
 }
 
+.app{
+    background-image: url('./assets/cold-bg.jpg');
+    background-size:50%;
+    background-position: bottom;
+    transition: 0.4s ease-in-out;
+}
+
+.app.warm{
+    background-image: url('./assets/warm-bg.jpg');
+}
+
+@media(max-width:1024px){
 .app{
     background-image: url('./assets/cold-bg.jpg');
     background-size: cover;
@@ -15,10 +28,11 @@ body{
     transition: 0.4s ease-in-out;
 }
 
+
 .app.warm{
     background-image: url('./assets/warm-bg.jpg');  
 }
-
+}
 main{
     min-height: 100vh;
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.75));
@@ -57,7 +71,7 @@ main{
     font-weight: 500;
     text-align: center;
     text-shadow: 3px 3px rgba(50,50,70,0.5);
-    padding-top: 55px ;
+    padding-top: 25px ;
 }
 
 .location-box .date{
@@ -83,7 +97,7 @@ main{
     padding: 15px 25px;
 
     color: #fff;
-    font-size: 102px;
+    font-size: 70px;
     font-weight: 900;
 
     text-shadow: 3px 6px rgba(50,50,70,0.5);
@@ -96,4 +110,75 @@ main{
     font-size: 48px;
     font-weight: 700;
     text-shadow: rgba(0,0,0,0.2);
+}
+
+.weather-box .weather-description{
+    color:#fff;
+    font-size: 18px;
+    font-weight: 200;
+    text-shadow: none;
+}
+
+.weather-box .forecast-temp{
+    position: relative;
+    display: inline-block;
+    margin: 30px auto;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 16px;
+
+    padding: 5px 65px;
+
+    color: #fff;
+    font-size: 20px;
+    font-weight: 100;
+
+    text-shadow: 3px 6px rgba(50,50,70,0.5);
+    text-align: center;
+    box-shadow: 3px 6px rgba(0,0,0,0.2);
+}
+
+.weather-box .forecast-temp h4{
+text-align: left;
+
+}
+
+.weather-box .forecast-temp{
+    margin-top: -8px;
+    
+    }
+
+.weather-box .speed{
+    position: relative;
+    display: inline-block;
+    margin: 5px;
+    background-color: darkgray;
+    border-radius: 16px;
+
+    padding: 15px 10px;
+
+    color: #fff;
+    font-size: 15px;
+    font-weight: 100;
+
+    text-shadow: none;
+    text-align: center;
+    box-shadow: 3px 6px rgba(0,0,0,0.2);
+}
+
+.weather-box .humidity{
+    position: relative;
+    display: inline-block;
+    margin: 5px;
+    background-color: darkgray;
+    border-radius: 16px;
+
+    padding: 15px 10px;
+
+    color: #fff;
+    font-size: 15px;
+    font-weight: 100;
+
+    text-shadow: none;
+    text-align: center;
+    box-shadow: 3px 6px rgba(0,0,0,0.2);
 }
